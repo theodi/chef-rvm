@@ -45,6 +45,14 @@ node["rvm"]["user_installs"].each do |r|
     EOF
   end
 
+  bash "set rvm autolibs" do
+    rvm_user = r["user"]
+    user "root"
+    code <<-EOF
+      sudo su - #{rvm_user} -c 'rvm autolibs 3'
+    EOF
+  end
+
   bash "install ruby" do
     user "root"
     code <<-EOF

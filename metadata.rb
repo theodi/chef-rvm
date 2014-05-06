@@ -1,4 +1,4 @@
-name             'odi-xml'
+name             'rvm'
 maintainer       'The Open Data Institute'
 maintainer_email 'tech@theodi.org'
 license          'MIT'
